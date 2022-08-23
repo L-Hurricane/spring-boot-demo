@@ -4,6 +4,7 @@ import com.example.demo.controller.entity.Article;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
 @Service("article_dao")
 public class ArticleDao {
 
-    private final List<Article> articles;
+    private final List<Article> articles = new ArrayList<>();
 
     @PostConstruct
     public void init() {
@@ -20,10 +21,6 @@ public class ArticleDao {
         Article article2 = new Article(2, "title2", "author2", "content2 content2", "2022-08-22 15:23:00");
         articles.add(article1);
         articles.add(article2);
-    }
-
-    public ArticleDao(List<Article> articles) {
-        this.articles = articles;
     }
 
     public Article getArticleById(int id) {
