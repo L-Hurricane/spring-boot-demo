@@ -17,8 +17,8 @@ public class ArticleDao {
 
     @PostConstruct
     public void init() {
-        Article article1 = new Article(1, "title1", "author1", "content1 content1", "2022-08-22 15:22:00");
-        Article article2 = new Article(2, "title2", "author2", "content2 content2", "2022-08-22 15:23:00");
+        Article article1 = new Article(1, "title1", "author1", "content1 content1", "北京", 1, "2022-08-22 15:22:00");
+        Article article2 = new Article(2, "title2", "author2", "content2 content2", "上海", 2, "2022-08-22 15:23:00");
         articles.add(article1);
         articles.add(article2);
     }

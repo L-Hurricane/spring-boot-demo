@@ -17,16 +17,22 @@ public class Article {
 
     private String content;
 
+    private String city;
+
+    private int length;
+
     private String modifyTime;
 
     public Article() {
     }
 
-    public Article(int id, String author, String title, String content, String modifyTime) {
+    public Article(int id, String author, String title, String content, String city, int length, String modifyTime) {
         this.id = id;
         this.author = author;
         this.title = title;
         this.content = content;
+        this.city = city;
+        this.length = length;
         this.modifyTime = modifyTime;
     }
 
@@ -60,6 +66,22 @@ public class Article {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
     }
 
     public String getModifyTime() {
